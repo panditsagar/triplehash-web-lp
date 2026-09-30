@@ -98,15 +98,15 @@ export default function Solutions() {
                 className="relative p-6 sm:p-8   border-r border-b border-slate-200 flex flex-col justify-between   transition-colors"
               >
                 <div>
-                  <div className="w-10 h-10 rounded   border border-slate-200 flex items-center justify-center mb-4 text-[#0a6c42]">
+                  <div className="w-10 h-10     border  border-dashed border-slate-300 flex items-center justify-center mb-4 text-[#0a6c42]">
                     <IconComponent className="w-5 h-5" />
                   </div>
 
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-3 leading-snug">
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 leading-snug">
                     {item.title}
                   </h3>
 
-                  <p className="text-sm text-slate-600 leading-relaxed font-normal">
+                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
                     {item.description}
                   </p>
                 </div>

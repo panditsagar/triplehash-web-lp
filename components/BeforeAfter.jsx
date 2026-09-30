@@ -3,25 +3,35 @@
 import { motion } from "motion/react";
 import { XCircle, CheckCircle2, ArrowRight } from "lucide-react";
 
-const beforePoints = [
-  "You chase your team for updates",
-  "Leads are followed up manually",
-  "Important information sits across WhatsApp, sheets and inboxes",
-  "Approvals wait for you",
-  "Reports have to be requested",
-  "Problems reach you before anyone else can solve them",
+const comparisonPairs = [
+  {
+    before: "You chase your team for updates",
+    after: "Follow-ups happen automatically",
+  },
+  {
+    before: "Leads are followed up manually",
+    after: "Your team knows what happens next",
+  },
+  {
+    before: "Important information sits across WhatsApp, sheets and inboxes",
+    after: "Key information is visible in one place",
+  },
+  {
+    before: "Approvals wait for you",
+    after: "Repetitive work moves without reminders",
+  },
+  {
+    before: "Reports have to be requested",
+    after: "You get visibility without chasing",
+  },
+  {
+    before: "Problems reach you before anyone else can solve them",
+    after:
+      "You spend more time on growth, strategy and decisions that actually need you",
+  },
 ];
 
-const afterPoints = [
-  "Follow-ups happen automatically",
-  "Your team knows what happens next",
-  "Key information is visible in one place",
-  "Repetitive work moves without reminders",
-  "You get visibility without chasing",
-  "You spend more time on growth, strategy and decisions that actually need you",
-];
-
-// Generate dense pixel grid matrix matching PainPoints banner (14 rows x 220 columns = 3,080 squares)
+// Generate dense pixel grid matrix matching PainPoints banner (15 rows x 221 columns = 3,315 squares)
 const gridRows = 15;
 const gridCols = 221;
 const stepX = 5.2;
@@ -31,10 +41,10 @@ const pixelGrid = [];
 for (let r = 0; r < gridRows; r++) {
   for (let c = 0; c < gridCols; c++) {
     const val = (r * 19 + c * 37 + (r % 4) * 9 + (c % 7) * 17) % 100;
-    
+
     let opacity = "0.15";
     let fill = "#cbd5e1";
-    
+
     if (val > 72) {
       opacity = "0.50";
       fill = "#94a3b8";
@@ -56,7 +66,12 @@ function SquareGridBanner() {
   return (
     <div className="w-full bg-[#f4f3ec] border-t border-b border-neutral-300">
       <div className="w-full max-w-6xl mx-auto border-l border-r border-neutral-300 h-[80px] relative overflow-hidden flex items-center justify-center">
-        <svg className="w-full h-full pointer-events-none" viewBox="0 0 1152 88" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          className="w-full h-full pointer-events-none"
+          viewBox="0 0 1152 88"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           {pixelGrid.map((sq, idx) => (
             <rect
               key={idx}
@@ -83,7 +98,6 @@ export default function BeforeAfter() {
       <section className="relative w-full bg-[#f4f3ec] text-slate-900 overflow-hidden">
         {/* Outer Framed Container: Left & Right Vertical Screen Borders Aligning with PainPoints & Hero */}
         <div className="relative py-14 pb-16 z-10 w-full max-w-6xl mx-auto border-l border-r border-neutral-300 px-4 sm:px-8 flex flex-col items-center">
-          
           {/* Section Header */}
           <div className="max-w-3xl text-center flex flex-col items-center mb-14">
             <motion.h2
@@ -104,76 +118,59 @@ export default function BeforeAfter() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mt-5 text-base sm:text-lg text-[#70707b] font-medium max-w-2xl leading-tight"
             >
-              Your business may still need you. <br className="hidden sm:inline" />
+              Your business may still need you.{" "}
+              <br className="hidden sm:inline" />
               <span className="text-[#0a6c42] font-semibold">
                 But it shouldn’t need you for everything.
               </span>
             </motion.p>
           </div>
 
-          {/* Before vs After Split Comparison Wall */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 w-full mb-16 border-l border-t border-neutral-300">
-            
-            {/* BEFORE COLUMN */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="p-8 sm:p-10 bg-[#f2f2ed] border-r border-b border-neutral-300 flex flex-col justify-between"
-            >
-              <div>
-                <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-red-100/80 border border-red-200 text-red-800 text-xs font-mono font-bold tracking-widest uppercase mb-6 rounded-none">
-                  <span>BEFORE</span>
+          {/* 6 Paired Comparison Rows Wall */}
+          <div className="w-full max-w-6xl mb-16 border-l border-t border-neutral-300">
+            {/* Table Header Row */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border-r border-b border-neutral-300  text-lg font-bold   tracking-wider text-slate-700">
+              <div className="p-4  border-r border-neutral-300 flex items-center  justify-center  ">
+                <span>Before </span>
+              </div>
+              <div
+                style={{
+                  background:
+                    "radial-gradient(ellipse at center, #004421 0%, #042717 100%)",
+                }}
+                className="p-4   flex items-center justify-center  text-[#ffffff]  "
+              >
+                <span>After </span>
+              </div>
+            </div>
+
+            {/* 6 Comparison Pairs */}
+            {comparisonPairs.map((pair, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.08 }}
+                className="grid grid-cols-1 md:grid-cols-2 gap-0 border-r border-b border-neutral-300"
+              >
+                {/* BEFORE CELL */}
+                <div className="p-5   bg-[#f2f2ed] border-r border-neutral-300 flex items-start gap-3.5">
+                  <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                  <span className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium">
+                    {pair.before}
+                  </span>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-6 leading-snug">
-                  Manual Friction & Constant Chasing
-                </h3>
-
-                <ul className="flex flex-col gap-4">
-                  {beforePoints.map((point, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
-                      <span className="text-sm sm:text-base text-slate-700 leading-snug font-medium">
-                        {point}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-
-            {/* AFTER COLUMN */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="p-8 sm:p-10 bg-white border-r border-b border-neutral-300 flex flex-col justify-between"
-            >
-              <div>
-                <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-emerald-100/90 border border-emerald-300 text-[#0a6c42] text-xs font-mono font-bold tracking-widest uppercase mb-6 rounded-none">
-                  <span>AFTER</span>
+                {/* AFTER CELL */}
+                <div className="p-5   flex items-start gap-3.5">
+                  <CheckCircle2 className="w-5 h-5 text-[#0a6c42] shrink-0 mt-0.5" />
+                  <span className="text-sm sm:text-base text-slate-900 leading-relaxed font-semibold">
+                    {pair.after}
+                  </span>
                 </div>
-
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-6 leading-snug">
-                  Automated Clarity & Systemised Ownership
-                </h3>
-
-                <ul className="flex flex-col gap-4">
-                  {afterPoints.map((point, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#0a6c42] shrink-0 mt-0.5" />
-                      <span className="text-sm sm:text-base text-slate-900 leading-snug font-semibold">
-                        {point}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-
+              </motion.div>
+            ))}
           </div>
 
           {/* Bottom Takeaway Callout Box */}
@@ -182,17 +179,16 @@ export default function BeforeAfter() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="w-full max-w-4xl rounded-none p-8 sm:p-10   border border-neutral-300 text-center relative overflow-hidden"
+            className="w-full max-w-4xl rounded-none p-8 sm:p-10  border border-neutral-300 text-center relative overflow-hidden"
           >
             <div className="relative z-10 flex flex-col items-center">
               <h4 className="text-sm sm:text-base font-bold text-[#0a6c42] uppercase tracking-widest mb-3">
                 The Goal Is Simple:
               </h4>
               <p className="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight max-w-3xl">
-                More Control Over The Business. <br className="hidden sm:inline" />
-                <span className="text-[#0a6c42]">
-                  Less Dependence On You.
-                </span>
+                More Control Over The Business.{" "}
+                <br className="hidden sm:inline" />
+                <span className="text-[#0a6c42]">Less Dependence On You.</span>
               </p>
               <div className="mt-8">
                 <a
@@ -215,7 +211,6 @@ export default function BeforeAfter() {
               </div>
             </div>
           </motion.div>
-
         </div>
       </section>
 

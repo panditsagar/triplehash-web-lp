@@ -131,7 +131,7 @@ export default function ProcessSection() {
             className="group/btn inline-flex items-center justify-center rounded-[2px] typo-blockquote cursor-pointer whitespace-nowrap transition-colors h-[48px] px-8 py-[12px] text-white bg-primary shadow-[0px_0px_0px_1px_#3a8363,0px_1px_2px_0px_rgba(0,0,0,0.64)] relative overflow-hidden font-bold tracking-wider uppercase text-sm"
           >
             <span className="relative z-10 flex items-center gap-2">
-              <span>START YOUR 1-TO-1 PROCESS NOW</span>
+              <span>BOOK YOUR 1:1 CALL NOW</span>
               <ArrowRight className="w-4 h-4" />
             </span>
             <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(74.61%_74.61%_at_50.39%_0%,rgba(255,255,255,0.32)_0%,rgba(191,191,191,0.24)_25%,rgba(128,128,128,0.16)_50%,rgba(0,0,0,0)_100%)] transition-opacity" />

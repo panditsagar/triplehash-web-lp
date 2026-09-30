@@ -12,43 +12,37 @@ import {
 
 const painPointsData = [
   {
-    problemNumber: "PROBLEM 1",
-    icon: GitFork,
+     icon: GitFork,
     title: "Every Important Decision Comes Back To You",
     description:
       "Your team can execute, but they still need you to approve, clarify or decide what happens next.",
   },
   {
-    problemNumber: "PROBLEM 2",
-    icon: Activity,
+     icon: Activity,
     title: "You’re Constantly Chasing Updates",
     description:
       "Tasks are moving, but you don’t have one clear view of what’s done, delayed or blocked.",
   },
   {
-    problemNumber: "PROBLEM 3",
-    icon: AlertTriangle,
+     icon: AlertTriangle,
     title: "Leads Depend On Manual Follow-Up",
     description:
-      "Someone forgets to call, reply or follow up — and revenue quietly slips through the cracks.",
+      "Someone forgets to call, reply or follow up and revenue quietly slips through the cracks.",
   },
   {
-    problemNumber: "PROBLEM 4",
-    icon: Layers,
+     icon: Layers,
     title: "Information Is Scattered Everywhere",
     description:
       "WhatsApp, spreadsheets, CRMs, emails and team conversations all hold different pieces of the business.",
   },
   {
-    problemNumber: "PROBLEM 5",
-    icon: UserX,
-    title: "Your Team Knows The Process — Until Someone Leaves",
+     icon: UserX,
+    title: "Your Team Knows The Process Until Someone Leaves",
     description:
       "Important knowledge lives inside people instead of inside reliable systems.",
   },
   {
-    problemNumber: "PROBLEM 6",
-    icon: SmartphoneNfc,
+     icon: SmartphoneNfc,
     title: "You Can Step Away Physically. But Not Mentally.",
     description:
       "Even when you’re not at work, you’re still checking messages, solving problems and making decisions.",
@@ -153,18 +147,18 @@ export default function PainPoints() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="relative p-6 sm:p-8 rounded-none   border-r border-b border-neutral-300 flex flex-col justify-between"
+                  className="relative p-6   rounded-none   border-r border-b border-neutral-300 flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-10 h-10 rounded-none   border border-neutral-300 flex items-center justify-center mb-4 text-[#0a6c42]">
+                    <div className="w-10 h-10 rounded-none border  border-dashed border-neutral-300 flex items-center justify-center mb-4 text-[#0a6c42]">
                       <IconComponent className="w-5 h-5" />
                     </div>
 
-                    <h3 className="text-lg font-bold text-slate-900 mb-3 leading-snug">
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 leading-snug">
                       {item.title}
                     </h3>
 
-                    <p className="text-sm text-slate-600 leading-relaxed font-normal">
+                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
                       {item.description}
                     </p>
                   </div>
