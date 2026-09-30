@@ -15,18 +15,640 @@ export default function Hero() {
           "radial-gradient(ellipse at center, #004421 0%, #042717 100%)",
       }}
     >
+      {/* Top Left Tech Circuit SVG Decorative Element (Below Navbar) */}
+      <div
+        className="absolute w-[161px] h-[245px] pointer-events-none hidden lg:block z-20"
+        style={{ right: "calc(50% + 576px)", top: "64px" }}
+      >
+        <svg
+          width="161"
+          height="245"
+          viewBox="0 0 161 245"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="pointer-events-none"
+        >
+          <defs>
+            <linearGradient
+              id="circuit-grad"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
+              <stop offset="0%" stopColor="#27B578" stopOpacity="0" />
+              <stop offset="50%" stopColor="#27B578" stopOpacity="1" />
+              <stop offset="100%" stopColor="#27B578" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M56.9741 223.035C55.8046 223.516 54.9611 224.791 54.9611 226.304C54.9611 228.229 56.3138 229.787 57.9806 229.787C59.6473 229.787 61 228.229 61 226.304C61 224.791 60.1566 223.514 58.987 223.035V182.577L22.013 139.932V0H20V140.894L56.9741 183.539V223.035Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M64.9741 223.035C63.8046 223.516 62.9611 224.791 62.9611 226.304C62.9611 228.229 64.3138 229.787 65.9806 229.787C67.6473 229.787 69 228.229 69 226.304C69 224.791 68.1566 223.514 66.987 223.035V178.73L30.013 136.085V0H28V137.046L64.9741 179.691V223.035Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M72.9741 223.035C71.8046 223.516 70.9611 224.791 70.9611 226.304C70.9611 228.229 72.3138 229.787 73.9806 229.787C75.6473 229.787 77 228.229 77 226.304C77 224.791 76.1566 223.514 74.987 223.035V174.883L38.013 132.238V0H36V133.199L72.9741 175.844V223.035Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M80.9741 223.035C79.8046 223.516 78.9611 224.791 78.9611 226.304C78.9611 228.229 80.3138 229.787 81.9806 229.787C83.6473 229.787 85 228.229 85 226.304C85 224.791 84.1566 223.514 82.987 223.035V171.038L46.013 128.393V0H44V129.354L80.9741 171.999V223.035Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M88.9741 223.035C87.8046 223.516 86.9611 224.791 86.9611 226.304C86.9611 228.229 88.3138 229.787 89.9806 229.787C91.6473 229.787 93 228.229 93 226.304C93 224.791 92.1566 223.514 90.987 223.035V167.191L54.013 124.546V0H52V125.507L88.9741 168.152V223.035Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M111.869 186.95C110.703 187.366 109.862 188.468 109.862 189.776C109.862 191.44 111.211 192.787 112.873 192.787C114.535 192.787 115.884 191.44 115.884 189.776C115.884 188.468 115.043 187.364 113.877 186.95V151.974L77.0073 115.106V0H75V115.937L111.869 152.805V186.95Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M119.897 186.95C118.73 187.366 117.889 188.468 117.889 189.776C117.889 191.44 119.238 192.787 120.9 192.787C122.562 192.787 123.911 191.44 123.911 189.776C123.911 188.468 123.07 187.364 121.904 186.95V148.648L85.0346 111.78V0H83.0273V112.611L119.897 149.479V186.95Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M127.928 186.95C126.762 187.366 125.921 188.468 125.921 189.776C125.921 191.44 127.27 192.787 128.932 192.787C130.594 192.787 131.942 191.44 131.942 189.776C131.942 188.468 131.101 187.364 129.935 186.95V145.322L93.0659 108.454V0H91.0586V109.285L127.928 146.152V186.95Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M135.955 186.95C134.789 187.366 133.948 188.468 133.948 189.776C133.948 191.44 135.297 192.787 136.959 192.787C138.621 192.787 139.97 191.44 139.97 189.776C139.97 188.468 139.129 187.364 137.963 186.95V141.997L101.093 105.13V0H99.0859V105.961L135.955 142.828V186.95Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M143.987 186.95C142.82 187.366 141.979 188.468 141.979 189.776C141.979 191.44 143.328 192.787 144.99 192.787C146.652 192.787 148.001 191.44 148.001 189.776C148.001 188.468 147.16 187.364 145.994 186.95V138.671L109.124 101.804V0H107.117V102.635L143.987 139.502V186.95Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M21 0 V140.4 L57 183 V226.3"
+            stroke="url(#circuit-grad)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 5s linear infinite",
+            }}
+          />
+          <path
+            d="M29 0 V136.6 L65 179.2 V226.3"
+            stroke="url(#circuit-grad)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 5.4s linear infinite",
+            }}
+          />
+          <path
+            d="M37 0 V132.7 L73 175.4 V226.3"
+            stroke="url(#circuit-grad)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 5.8s linear infinite",
+            }}
+          />
+          <path
+            d="M45 0 V128.9 L81 171.5 V226.3"
+            stroke="url(#circuit-grad)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 6.2s linear infinite",
+            }}
+          />
+          <path
+            d="M53 0 V125 L89 167.7 V226.3"
+            stroke="url(#circuit-grad)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 6.6s linear infinite",
+            }}
+          />
+          <path
+            d="M76 0 V115.5 L112.9 152.4 V189.8"
+            stroke="url(#circuit-grad)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 7s linear infinite",
+            }}
+          />
+          <path
+            d="M84 0 V112.2 L120.9 149.1 V189.8"
+            stroke="url(#circuit-grad)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 7.4s linear infinite",
+            }}
+          />
+          <path
+            d="M92 0 V108.9 L128.9 145.7 V189.8"
+            stroke="url(#circuit-grad)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 7.8s linear infinite",
+            }}
+          />
+          <path
+            d="M100 0 V105.5 L137 142.4 V189.8"
+            stroke="url(#circuit-grad)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 8.2s linear infinite",
+            }}
+          />
+          <path
+            d="M108 0 V102.2 L145 139.1 V189.8"
+            stroke="url(#circuit-grad)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 8.6s linear infinite",
+            }}
+          />
+          <circle
+            cx="58"
+            cy="226.3"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+          <circle
+            cx="66"
+            cy="226.3"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+          <circle
+            cx="74"
+            cy="226.3"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+          <circle
+            cx="82"
+            cy="226.3"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+          <circle
+            cx="90"
+            cy="226.3"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+          <circle
+            cx="112.9"
+            cy="189.8"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+          <circle
+            cx="120.9"
+            cy="189.8"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+          <circle
+            cx="128.9"
+            cy="189.8"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+          <circle
+            cx="137"
+            cy="189.8"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+          <circle
+            cx="145"
+            cy="189.8"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+        </svg>
+      </div>
+
+      {/* Top Right Tech Circuit SVG Decorative Element (Below Navbar) */}
+      <div
+        className="absolute w-[161px] h-[245px] pointer-events-none hidden lg:block z-20"
+        style={{
+          left: "calc(50% + 576px)",
+          top: "64px",
+          transform: "scaleX(-1)",
+        }}
+      >
+        <svg
+          width="161"
+          height="245"
+          viewBox="0 0 161 245"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="pointer-events-none"
+        >
+          <defs>
+            <linearGradient
+              id="circuit-grad-right"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
+              <stop offset="0%" stopColor="#27B578" stopOpacity="0" />
+              <stop offset="50%" stopColor="#27B578" stopOpacity="1" />
+              <stop offset="100%" stopColor="#27B578" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M56.9741 223.035C55.8046 223.516 54.9611 224.791 54.9611 226.304C54.9611 228.229 56.3138 229.787 57.9806 229.787C59.6473 229.787 61 228.229 61 226.304C61 224.791 60.1566 223.514 58.987 223.035V182.577L22.013 139.932V0H20V140.894L56.9741 183.539V223.035Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M64.9741 223.035C63.8046 223.516 62.9611 224.791 62.9611 226.304C62.9611 228.229 64.3138 229.787 65.9806 229.787C67.6473 229.787 69 228.229 69 226.304C69 224.791 68.1566 223.514 66.987 223.035V178.73L30.013 136.085V0H28V137.046L64.9741 179.691V223.035Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M72.9741 223.035C71.8046 223.516 70.9611 224.791 70.9611 226.304C70.9611 228.229 72.3138 229.787 73.9806 229.787C75.6473 229.787 77 228.229 77 226.304C77 224.791 76.1566 223.514 74.987 223.035V174.883L38.013 132.238V0H36V133.199L72.9741 175.844V223.035Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M80.9741 223.035C79.8046 223.516 78.9611 224.791 78.9611 226.304C78.9611 228.229 80.3138 229.787 81.9806 229.787C83.6473 229.787 85 228.229 85 226.304C85 224.791 84.1566 223.514 82.987 223.035V171.038L46.013 128.393V0H44V129.354L80.9741 171.999V223.035Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M88.9741 223.035C87.8046 223.516 86.9611 224.791 86.9611 226.304C86.9611 228.229 88.3138 229.787 89.9806 229.787C91.6473 229.787 93 228.229 93 226.304C93 224.791 92.1566 223.514 90.987 223.035V167.191L54.013 124.546V0H52V125.507L88.9741 168.152V223.035Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M111.869 186.95C110.703 187.366 109.862 188.468 109.862 189.776C109.862 191.44 111.211 192.787 112.873 192.787C114.535 192.787 115.884 191.44 115.884 189.776C115.884 188.468 115.043 187.364 113.877 186.95V151.974L77.0073 115.106V0H75V115.937L111.869 152.805V186.95Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M119.897 186.95C118.73 187.366 117.889 188.468 117.889 189.776C117.889 191.44 119.238 192.787 120.9 192.787C122.562 192.787 123.911 191.44 123.911 189.776C123.911 188.468 123.07 187.364 121.904 186.95V148.648L85.0346 111.78V0H83.0273V112.611L119.897 149.479V186.95Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M127.928 186.95C126.762 187.366 125.921 188.468 125.921 189.776C125.921 191.44 127.27 192.787 128.932 192.787C130.594 192.787 131.942 191.44 131.942 189.776C131.942 188.468 131.101 187.364 129.935 186.95V145.322L93.0659 108.454V0H91.0586V109.285L127.928 146.152V186.95Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M135.955 186.95C134.789 187.366 133.948 188.468 133.948 189.776C133.948 191.44 135.297 192.787 136.959 192.787C138.621 192.787 139.97 191.44 139.97 189.776C139.97 188.468 139.129 187.364 137.963 186.95V141.997L101.093 105.13V0H99.0859V105.961L135.955 142.828V186.95Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M143.987 186.95C142.82 187.366 141.979 188.468 141.979 189.776C141.979 191.44 143.328 192.787 144.99 192.787C146.652 192.787 148.001 191.44 148.001 189.776C148.001 188.468 147.16 187.364 145.994 186.95V138.671L109.124 101.804V0H107.117V102.635L143.987 139.502V186.95Z"
+            fill="white"
+            fillOpacity="0.16"
+          />
+          <path
+            d="M21 0 V140.4 L57 183 V226.3"
+            stroke="url(#circuit-grad-right)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 5s linear infinite",
+            }}
+          />
+          <path
+            d="M29 0 V136.6 L65 179.2 V226.3"
+            stroke="url(#circuit-grad-right)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 5.4s linear infinite",
+            }}
+          />
+          <path
+            d="M37 0 V132.7 L73 175.4 V226.3"
+            stroke="url(#circuit-grad-right)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 5.8s linear infinite",
+            }}
+          />
+          <path
+            d="M45 0 V128.9 L81 171.5 V226.3"
+            stroke="url(#circuit-grad-right)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 6.2s linear infinite",
+            }}
+          />
+          <path
+            d="M53 0 V125 L89 167.7 V226.3"
+            stroke="url(#circuit-grad-right)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 6.6s linear infinite",
+            }}
+          />
+          <path
+            d="M76 0 V115.5 L112.9 152.4 V189.8"
+            stroke="url(#circuit-grad-right)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 7s linear infinite",
+            }}
+          />
+          <path
+            d="M84 0 V112.2 L120.9 149.1 V189.8"
+            stroke="url(#circuit-grad-right)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 7.4s linear infinite",
+            }}
+          />
+          <path
+            d="M92 0 V108.9 L128.9 145.7 V189.8"
+            stroke="url(#circuit-grad-right)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 7.8s linear infinite",
+            }}
+          />
+          <path
+            d="M100 0 V105.5 L137 142.4 V189.8"
+            stroke="url(#circuit-grad-right)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 8.2s linear infinite",
+            }}
+          />
+          <path
+            d="M108 0 V102.2 L145 139.1 V189.8"
+            stroke="url(#circuit-grad-right)"
+            strokeWidth="2"
+            fill="none"
+            pathLength="1"
+            strokeDasharray="0.1 0.9"
+            style={{
+              strokeDashoffset: 1,
+              willChange: "stroke-dashoffset",
+              animation: "circuit-pulse 8.6s linear infinite",
+            }}
+          />
+          <circle
+            cx="58"
+            cy="226.3"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+          <circle
+            cx="66"
+            cy="226.3"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+          <circle
+            cx="74"
+            cy="226.3"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+          <circle
+            cx="82"
+            cy="226.3"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+          <circle
+            cx="90"
+            cy="226.3"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+          <circle
+            cx="112.9"
+            cy="189.8"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+          <circle
+            cx="120.9"
+            cy="189.8"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+          <circle
+            cx="128.9"
+            cy="189.8"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+          <circle
+            cx="137"
+            cy="189.8"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+          <circle
+            cx="145"
+            cy="189.8"
+            r="3"
+            fill="#27B578"
+            style={{
+              opacity: 0.05,
+              animation: "circuit-node-glow 5s ease-in-out infinite",
+            }}
+          />
+        </svg>
+      </div>
+
       {/* 100% Full Screen Width Top Navbar Horizontal Divider Border */}
       <div className="w-full bg-[#042717] border-b border-white/10 h-16  ">
         <div className="w-full max-w-6xl mx-auto border-l border-r border-white/10 h-full px-4 sm:px-8 flex items-center justify-center">
           {/* Targeted Audience Text in Navbar */}
           <div className="flex flex-wrap items-center justify-center gap-2   text-xs sm:text-sm font-extrabold tracking-wider uppercase">
             <div>
-              <span className="text-emerald-400">₹1 CRORE+</span>{" "}
+              <span className="text-[#26a36e]">₹1 CRORE+</span>{" "}
               <span className="text-white">REVENUE?</span>
             </div>
 
             <div>
-              <span className="text-emerald-400">5+ PEOPLE</span>{" "}
+              <span className="text-[#26a36e]">5+ PEOPLE</span>{" "}
               <span className="text-white">ON YOUR TEAM?</span>
             </div>
           </div>
@@ -34,7 +656,7 @@ export default function Hero() {
       </div>
 
       {/* Main Hero Content Box with Left & Right Vertical Screen Borders */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto border-l border-r border-white/10 flex-1 px-4 sm:px-8 py-10  flex flex-col items-center text-center">
+      <div className="relative z-10 w-full max-w-6xl mx-auto border-l border-r border-white/10 flex-1 px-4 sm:px-8 pt-10 pb-14 flex flex-col items-center text-center">
         {/* Main Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -53,14 +675,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-          className="mt-6 text-lg sm:text-xl md:text-2xl text-[#FFFFFF80] max-w-3xl font-light "
+          className="mt-6 text-lg sm:text-xl md:text-2xl text-[#FFFFFF80] max-w-3xl font-medium "
         >
           Build the systems that{" "}
-          <strong className="text-white font-medium">
+          <strong className="text-white font-semibold">
             give you back your time
           </strong>{" "}
           with AI, automation and a{" "}
-          <strong className="text-emerald-300 font-semibold underline decoration-emerald-500/50 underline-offset-4">
+          <strong className="text-[#26a36e] font-semibold  ">
             real engineering team
           </strong>{" "}
           behind your business.
@@ -71,7 +693,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-          className="mt-8 mb-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-2xl"
+          className="mt-10 mb-12 flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-2xl"
         >
           <a
             href="#book-call"
@@ -104,62 +726,25 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="w-full max-w-4xl group"
         >
-          <div className="relative rounded-2xl p-1 bg-gradient-to-b from-emerald-400/30 via-emerald-600/20 to-emerald-900/40 shadow-[0_20px_50px_rgba(0,0,0,0.5),0_0_30px_rgba(16,185,129,0.2)]">
-            <div className="relative aspect-video rounded-xl bg-emerald-950/90 overflow-hidden border border-emerald-500/20 flex flex-col items-center justify-center">
-              {!isPlaying ? (
-                <>
-                  {/* Video Thumbnail Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 z-10" />
+          <div className="relative p-3 bg-[#1E5D3F]">
+            {/* Top-Left Tech Corner Accent */}
+            <span className="absolute -top-[2px] -left-[2px] w-6 h-6 border-t-3 border-l-3 border-[#26a36e] pointer-events-none z-30  " />
+            {/* Top-Right Tech Corner Accent */}
+            <span className="absolute -top-[2px] -right-[2px] w-6 h-6 border-t-3 border-r-3 border-[#26a36e] pointer-events-none z-30  " />
+            {/* Bottom-Left Tech Corner Accent */}
+            <span className="absolute -bottom-[2px] -left-[2px] w-6 h-6 border-b-3 border-l-3 border-[#26a36e] pointer-events-none z-30  " />
+            {/* Bottom-Right Tech Corner Accent */}
+            <span className="absolute -bottom-[2px] -right-[2px] w-6 h-6 border-b-3 border-r-3 border-[#26a36e] pointer-events-none z-30  " />
 
-                  {/* Mock Video Graphic / Visual background */}
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#054a25_0%,#021b10_100%)] opacity-80" />
-                  <div className="absolute inset-0 flex items-center justify-center opacity-10">
-                    <div className="w-[500px] h-[500px] rounded-full border border-emerald-400 border-dashed animate-[spin_60s_linear_infinite]" />
-                  </div>
-
-                  {/* Top Video Pill Tag */}
-                  <div className="absolute top-4 left-4 z-20 flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-xs text-emerald-300">
-                    <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                    <span>Exclusive Strategy Breakdown (7 Min)</span>
-                  </div>
-
-                  {/* Unmute/Sound Hint */}
-                  <div className="absolute top-4 right-4 z-20 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-xs text-white/80">
-                    <Volume2 className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>Sound On</span>
-                  </div>
-
-                  {/* Center Play Button */}
-                  <button
-                    onClick={() => setIsPlaying(true)}
-                    className="relative z-20 group/btn flex flex-col items-center gap-4 cursor-pointer focus:outline-none"
-                    aria-label="Play VSL Video"
-                  >
-                    <div className="relative flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gradient-to-tr from-emerald-500 to-emerald-400 text-slate-950 shadow-[0_0_40px_rgba(16,185,129,0.6)] group-hover/btn:scale-110 transition-transform duration-300 ease-out">
-                      <div className="absolute -inset-2 rounded-full border border-emerald-400/40 animate-ping pointer-events-none" />
-                      <Play className="w-9 h-9 sm:w-11 sm:h-11 fill-slate-950 ml-1" />
-                    </div>
-                    <span className="text-white text-sm sm:text-base font-medium tracking-wide drop-shadow bg-black/40 px-4 py-1.5 rounded-full border border-white/10">
-                      Watch Video to See How It Works
-                    </span>
-                  </button>
-
-                  {/* Bottom Video Caption */}
-                  <div className="absolute bottom-4 left-4 right-4 z-20 text-center text-xs sm:text-sm text-emerald-200/70 font-light">
-                    "How Founders Transition From 70-Hour Bottlenecks to
-                    Scalable Systems"
-                  </div>
-                </>
-              ) : (
-                /* Embedded Video Player (e.g. YouTube / Loom / Custom Player) */
-                <iframe
-                  className="w-full h-full z-20"
-                  src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1"
-                  title="VSL Video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              )}
+            <div className="relative aspect-video overflow-hidden flex flex-col items-center justify-center">
+              <iframe
+                className="w-full h-full z-20"
+              
+                src="https://www.youtube-nocookie.com/embed/lYCADK9ehXg?autoplay=1"
+                title="VSL Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
           </div>
         </motion.div>
