@@ -1,15 +1,9 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const switzerStylesheet =
+  "https://api.fontshare.com/v2/css?f[]=switzer@100,200,300,400,500,600,700,800,900&display=swap";
+const satoshiStylesheet =
+  "https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap";
 
 export const metadata = {
   title: "Create Next App",
@@ -18,11 +12,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="en" className="h-full antialiased">
+      <body className="min-h-full flex flex-col">
+        <link rel="stylesheet" href={switzerStylesheet} />
+        <link rel="stylesheet" href={satoshiStylesheet} />
+        {children}
+      </body>
     </html>
   );
 }
