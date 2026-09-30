@@ -51,7 +51,7 @@ function LogoTile({ logo }) {
 
 export default function LogoMarquee() {
   return (
-    <section className="relative w-full bg-white   overflow-hidden border-t border-b border-slate-200">
+    <section className="relative w-full bg-white   overflow-hidden border-t   border-slate-200">
       {/* Container framing with left & right vertical borders */}
       <div className="w-full max-w-6xl mx-auto border-l border-r border-slate-200 flex flex-col items-center py-14">
         
