@@ -639,32 +639,31 @@ export default function Hero() {
 
       {/* 100% Full Screen Width Top Navbar Horizontal Divider Border */}
       <div className="w-full bg-[#042717] border-b border-white/10 h-16  ">
-        <div className="w-full max-w-6xl mx-auto border-l border-r border-white/10 h-full px-4 sm:px-8 flex items-center justify-center">
-          {/* Targeted Audience Text in Navbar */}
-          <div className="flex flex-wrap items-center justify-center gap-2   text-xs sm:text-sm font-extrabold tracking-wider uppercase">
-            <div>
-              <span className="text-[#26a36e]">₹1 CRORE+</span>{" "}
-              <span className="text-white">REVENUE?</span>
-            </div>
-
-            <div>
-              <span className="text-[#26a36e]">5+ PEOPLE</span>{" "}
-              <span className="text-white">ON YOUR TEAM?</span>
-            </div>
-          </div>
-        </div>
+        <div className="w-full max-w-6xl mx-auto border-l border-r border-white/10 h-full px-4 sm:px-8 flex items-center justify-center"></div>
       </div>
 
       {/* Main Hero Content Box with Left & Right Vertical Screen Borders */}
       <div className="relative z-10 w-full max-w-6xl mx-auto border-l border-r border-white/10 flex-1 px-4 sm:px-8 pt-10 pb-14 flex flex-col items-center text-center">
+        {/* Targeted Audience Text in Navbar */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-2  text-3xl   font-bold tracking-wider uppercase">
+          <div>
+            <span className="text-[#26a36e]">₹1 CRORE+</span>{" "}
+            <span className="text-white">REVENUE?</span>
+          </div>
+
+          <div>
+            <span className="text-[#26a36e]">5+ PEOPLE</span>{" "}
+            <span className="text-white">ON YOUR TEAM?</span>
+          </div>
+        </div>
         {/* Main Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-          className="headline text-4xl sm:text-6xl   font-medium text-white tracking-tight leading-[1.1] max-w-4xl"
+          className="headline text-4xl sm:text-[2.6rem]   font-medium text-white tracking-tight leading-[1.1] max-w-4xl"
         >
-          But Still Involved <br className="hidden sm:inline" />
+          But Still Involved &nbsp;
           <span className="bg-gradient-to-r from-emerald-200 via-emerald-400 to-teal-200 bg-clip-text text-transparent drop-shadow-sm">
             In Every Decision?
           </span>
@@ -675,7 +674,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-          className="mt-6 text-lg sm:text-xl md:text-2xl text-[#FFFFFF80] max-w-3xl font-medium "
+          className="mt-10 text-lg sm:text-xl md:text-2xl text-[#FFFFFF80] max-w-3xl font-medium "
         >
           Build the systems that{" "}
           <strong className="text-white font-semibold">
@@ -693,7 +692,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-          className="mt-10 mb-12 flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-2xl"
+          className="mt-12 mb-14 flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-2xl"
         >
           <a
             href="#book-call"
@@ -739,7 +738,6 @@ export default function Hero() {
             <div className="relative aspect-video overflow-hidden flex flex-col items-center justify-center">
               <iframe
                 className="w-full h-full z-20"
-              
                 src="https://www.youtube-nocookie.com/embed/lYCADK9ehXg?autoplay=1"
                 title="VSL Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

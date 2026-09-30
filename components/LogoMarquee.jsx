@@ -54,7 +54,6 @@ export default function LogoMarquee() {
     <section className="relative w-full bg-white   overflow-hidden border-t   border-slate-200">
       {/* Container framing with left & right vertical borders */}
       <div className="w-full max-w-6xl mx-auto border-l border-r border-slate-200 flex flex-col items-center py-14">
-        
         {/* Title */}
         <p className="text-xs sm:text-sm font-mono   tracking-[0.1em] text-neutral-500 mb-10 text-center font-semibold px-4">
           Trusted by thousands of global businesses
@@ -62,7 +61,6 @@ export default function LogoMarquee() {
 
         {/* Marquee Rows Container - No Gap Grid */}
         <div className="w-full flex flex-col gap-0 overflow-hidden">
-          
           {/* Row 1 - Left Marquee */}
           <div className="flex w-full overflow-hidden  ">
             <div className="flex shrink-0 animate-[marquee-left_30s_linear_infinite] hover:[animation-play-state:paused]">
@@ -92,7 +90,7 @@ export default function LogoMarquee() {
           </div>
 
           {/* Row 3 - Left Marquee */}
-          <div className="flex w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+          <div className="flex w-full overflow-hidden  ">
             <div className="flex shrink-0 animate-[marquee-left_28s_linear_infinite] hover:[animation-play-state:paused]">
               {row3Logos.concat(row3Logos).map((logo, idx) => (
                 <LogoTile key={`r3-1-${idx}`} logo={logo} />
@@ -104,9 +102,7 @@ export default function LogoMarquee() {
               ))}
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
   );
