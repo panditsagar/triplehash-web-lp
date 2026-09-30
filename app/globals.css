@@ -3,6 +3,11 @@
 :root {
   --font-switzer: "Switzer", sans-serif;
   --font-satoshi: "Satoshi", sans-serif;
+  --primary: #0b7548;
+}
+
+@theme {
+  --color-primary: #0b7548;
 }
 
 body {

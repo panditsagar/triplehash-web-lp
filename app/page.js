@@ -1,7 +1,9 @@
+import Hero from "@/components/Hero";
+
 export default function Home() {
   return (
-    <div className=" ">
-      <h1 className="headline">Sagar</h1>
-    </div>
+    <main className="min-h-screen bg-[#042717] text-white">
+      <Hero />
+    </main>
   );
 }
