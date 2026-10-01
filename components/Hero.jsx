@@ -647,10 +647,8 @@ export default function Hero() {
           </div>
         </div>
         {/* Main Headline */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+        <h1
+         
           className="headline text-3xl sm:text-[2.6rem] font-medium text-white tracking-tight leading-[1.2] sm:leading-[1.1] max-w-4xl"
         >
           But Still Involved<span className="hidden sm:inline">&nbsp;</span>
@@ -658,13 +656,11 @@ export default function Hero() {
           <span className="bg-gradient-to-r from-emerald-200 via-emerald-400 to-teal-200 bg-clip-text text-transparent drop-shadow-sm">
             In Every Decision?
           </span>
-        </motion.h1>
+        </h1>
 
         {/* Subtitle */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+        <p
+        
           className="mt-6 sm:mt-10 text-md sm:text-xl md:text-2xl text-[#FFFFFF80] max-w-3xl font-medium "
         >
           Build the systems that{" "}
@@ -676,13 +672,11 @@ export default function Hero() {
             real engineering team
           </strong>{" "}
           behind your business.
-        </motion.p>
+        </p>
 
         {/* Call To Action Buttons (Above Video) */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+        <div
+          
           className="mt-8 sm:mt-12 mb-10 sm:mb-14 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-2xl px-2 sm:px-0"
         >
           <a
@@ -713,14 +707,12 @@ export default function Hero() {
             <Play className="w-4 h-4 text-white fill-white shrink-0" />
             <span className="relative z-10">Watch 2 min vsl video</span>
           </button>
-        </motion.div>
+        </div>
 
         {/* VSL Video Section (Below Button) */}
-        <motion.div
+        <div
           id="vsl-video"
-          initial={{ opacity: 0, scale: 0.96, y: 30 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          
           className="w-full max-w-4xl group"
         >
           <div className="relative p-2 sm:p-3 bg-[#1E5D3F]">
@@ -743,7 +735,7 @@ export default function Hero() {
               />
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -36,8 +36,8 @@ export default function LogoMarquee() {
       {/* Container framing with left & right vertical borders */}
       <div className="w-[calc(100%-20px)] sm:w-full max-w-6xl mx-auto border-l border-r border-slate-200 flex flex-col items-center py-8 sm:py-14">
         {/* Title */}
-        <p className="text-xs sm:text-sm font-mono tracking-[0.1em] text-neutral-500 mb-6 sm:mb-10 text-center font-semibold px-4">
-          Trusted by thousands of global businesses
+        <p className="text-xs sm:text-sm font-mono sm:tracking-[0.1em] text-neutral-500 mb-6 sm:mb-10 text-center font-semibold px-4">
+          Trusted by hundred of global businesses
         </p>
 
         {/* Marquee Rows Container - No Gap Grid */}
