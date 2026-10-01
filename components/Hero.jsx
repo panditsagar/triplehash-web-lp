@@ -628,21 +628,21 @@ export default function Hero() {
       </div>
 
       {/* 100% Full Screen Width Top Navbar Horizontal Divider Border */}
-      <div className="w-full bg-[#042717] border-b border-white/10 h-12 sm:h-16">
+      <div className="w-full bg-[#042717] border-b border-white/10 h-12 sm:h-16 z-20">
         <div className="w-[calc(100%-20px)] sm:w-full max-w-6xl mx-auto border-l border-r border-white/10 h-full px-4 sm:px-8 flex items-center justify-center"></div>
       </div>
 
       {/* Main Hero Content Box with Left & Right Vertical Screen Borders */}
       <div className="relative z-10 w-[calc(100%-20px)] sm:w-full max-w-6xl mx-auto border-l border-r border-white/10 flex-1 px-3 sm:px-8 pt-6 sm:pt-10 pb-10 sm:pb-14 flex flex-col items-center text-center">
         {/* Targeted Audience Text in Navbar */}
-        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 sm:gap-2 mb-2 sm:mb-2 text-2xl sm:text-2xl md:text-3xl font-bold tracking-wider uppercase text-center">
+        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 sm:gap-2 mb-2 sm:mb-2 text-xl sm:text-2xl md:text-3xl font-bold   uppercase text-center">
           <div className="whitespace-nowrap">
             <span className="text-[#26a36e]">₹1 CRORE+</span>{" "}
             <span className="text-white">REVENUE?</span>
           </div>
 
           <div className="whitespace-nowrap">
-            <span className="text-[#26a36e]">5+ PEOPLE</span>{" "}
+            <span className="text-[#26a36e]">5 - 500+ PEOPLE</span>{" "}
             <span className="text-white">ON YOUR TEAM?</span>
           </div>
         </div>
@@ -725,13 +725,13 @@ export default function Hero() {
         >
           <div className="relative p-2 sm:p-3 bg-[#1E5D3F]">
             {/* Top-Left Tech Corner Accent */}
-            <span className="absolute -top-[2px] -left-[2px] w-4 h-4 sm:w-6 sm:h-6 border-t-[3px] border-l-[3px] border-[#26a36e] pointer-events-none z-30" />
+            <span className="absolute -top-[2px] -left-[2px] w-4 h-4 sm:w-6 sm:h-6 border-t-[2px] border-l-[2px] sm:border-t-[3px] sm:border-l-[3px] border-[#26a36e] pointer-events-none z-30" />
             {/* Top-Right Tech Corner Accent */}
-            <span className="absolute -top-[2px] -right-[2px] w-4 h-4 sm:w-6 sm:h-6 border-t-[3px] border-r-[3px] border-[#26a36e] pointer-events-none z-30" />
+            <span className="absolute -top-[2px] -right-[2px] w-4 h-4 sm:w-6 sm:h-6 border-t-[2px] border-r-[2px] sm:border-t-[3px] sm:border-l-[3px] border-[#26a36e] pointer-events-none z-30" />
             {/* Bottom-Left Tech Corner Accent */}
-            <span className="absolute -bottom-[2px] -left-[2px] w-4 h-4 sm:w-6 sm:h-6 border-b-[3px] border-l-[3px] border-[#26a36e] pointer-events-none z-30" />
+            <span className="absolute -bottom-[2px] -left-[2px] w-4 h-4 sm:w-6 sm:h-6 border-b-[2px] border-l-[2px] sm:border-t-[3px] sm:border-l-[3px] border-[#26a36e] pointer-events-none z-30" />
             {/* Bottom-Right Tech Corner Accent */}
-            <span className="absolute -bottom-[2px] -right-[2px] w-4 h-4 sm:w-6 sm:h-6 border-b-[3px] border-r-[3px] border-[#26a36e] pointer-events-none z-30" />
+            <span className="absolute -bottom-[2px] -right-[2px] w-4 h-4 sm:w-6 sm:h-6 border-b-[2px] border-r-[2px] sm:border-t-[3px] sm:border-l-[3px] border-[#26a36e] pointer-events-none z-30" />
 
             <div className="relative aspect-video overflow-hidden flex flex-col items-center justify-center">
               <iframe
