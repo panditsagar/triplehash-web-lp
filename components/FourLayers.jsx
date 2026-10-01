@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { UserCheck, Repeat, Zap, Code2, Sparkles, Layers } from "lucide-react";
+import { UserCheck, Repeat, Zap, Code2, Layers } from "lucide-react";
 
 const layersData = [
   {
@@ -71,7 +71,7 @@ for (let r = 0; r < gridRows; r++) {
 function SquareGridBanner() {
   return (
     <div className="w-full bg-[#042717] border-t border-b border-white/10">
-      <div className="w-full max-w-6xl mx-auto border-l border-r border-white/10 h-[80px] relative overflow-hidden flex items-center justify-center">
+      <div className="w-[calc(100%-20px)] sm:w-full max-w-6xl mx-auto border-l border-r border-white/10 h-[50px] sm:h-[80px] relative overflow-hidden flex items-center justify-center">
         <svg
           className="w-full h-full pointer-events-none"
           viewBox="0 0 1152 88"
@@ -109,15 +109,15 @@ export default function FourLayers() {
         }}
       >
         {/* Outer Framed Container: Left & Right Vertical Screen Borders Aligning across all sections */}
-        <div className="relative z-10 pt-12 pb-16 w-full max-w-6xl mx-auto border-l border-r border-white/10  flex flex-col items-center">
+        <div className="relative z-10 pt-8 sm:pt-12 pb-10 sm:pb-16 w-[calc(100%-20px)] sm:w-full max-w-6xl mx-auto border-l border-r border-white/10 px-3 sm:px-8 flex flex-col items-center">
           {/* Section Pre-badge & Header */}
-          <div className="max-w-4xl text-center flex flex-col items-center mb-10">
+          <div className="max-w-4xl text-center flex flex-col items-center mb-8 sm:mb-10 px-2 sm:px-0">
             <motion.h2
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="headline text-2xl sm:text-4xl  font-semibold  text-white leading-tight"
+              className="headline text-2xl sm:text-4xl font-semibold text-white leading-tight"
             >
               The Better Question Is: <br className="hidden sm:inline" />
               <span className="bg-gradient-to-r from-emerald-200 via-emerald-400 to-teal-200 bg-clip-text text-transparent">
@@ -131,7 +131,7 @@ export default function FourLayers() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-6 text-base sm:text-lg text-[#FFFFFFB3] max-w-3xl leading-relaxed font-normal"
+              className="mt-4 sm:mt-6 text-md sm:text-lg text-[#FFFFFFB3] max-w-3xl leading-tight font-medium"
             >
               Not every process should be automated. Not every decision should
               be handed to AI. And not every problem needs another software
@@ -152,21 +152,20 @@ export default function FourLayers() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.25 }}
-            className="w-full max-w-4xl text-center mb-12 flex flex-col items-center"
+            className="w-full max-w-4xl text-center mb-8 sm:mb-12 flex flex-col items-center px-2 sm:px-0"
           >
             <div className="inline-flex items-center gap-2 text-emerald-400 font-mono text-xs sm:text-sm tracking-widest uppercase mb-2 font-bold">
               <Layers className="w-4 h-4" />
               <span>That’s Where We Start</span>
             </div>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            <h3 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
               We Look At Your Business In 4 Layers
             </h3>
           </motion.div>
 
           {/* 4 Layers Wall - Single Row 4-Column Zero Gap Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 w-full mb-16 border-l border-t border-emerald-500/20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 w-full mb-10 sm:mb-16 border-l border-t border-emerald-500/20">
             {layersData.map((layer, idx) => {
-              const IconComponent = layer.icon;
               return (
                 <motion.div
                   key={idx}
@@ -174,20 +173,20 @@ export default function FourLayers() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="relative p-5   border-r border-b border-emerald-500/20 flex flex-col justify-between group hover:bg-[#234F36] transition-all duration-300"
+                  className="relative p-5 sm:p-6 border-r border-b border-emerald-500/20 flex flex-col justify-between group hover:bg-[#234F36] transition-all duration-300"
                 >
                   <div>
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="w-11 h-11 border border-dashed border-white/40 bg-[#234F36] flex items-center justify-center font-bold text-white text-lg rounded-none">
+                    <div className="flex items-center justify-between mb-4 sm:mb-6">
+                      <div className="w-9 h-9 sm:w-11 sm:h-11 border border-dashed border-white/40 bg-[#234F36] flex items-center justify-center font-bold text-white text-base sm:text-lg rounded-none">
                         {layer.number}
                       </div>
                     </div>
 
-                    <h4 className="text-xl sm:text-2xl font-bold text-white mb-3 leading-snug">
+                    <h4 className="text-lg sm:text-2xl font-bold text-white mb-3 leading-snug">
                       {layer.title}
                     </h4>
 
-                    <p className="text-sm sm:text-base text-[#FFFFFF99] leading-relaxed font-medium">
+                    <p className="text-md sm:text-base text-[#FFFFFF99]  font-medium">
                       {layer.description}
                     </p>
                   </div>
@@ -202,24 +201,24 @@ export default function FourLayers() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="w-full max-w-4xl p-8 sm:p-10 ] border border-emerald-500/20 text-center relative overflow-hidden"
+            className="w-full max-w-4xl p-6 sm:p-10 border border-emerald-500/20 text-center relative overflow-hidden"
           >
             <div className="relative z-10 flex flex-col items-center">
-              <h4 className="text-emerald-400 text-sm sm:text-base font-mono font-bold tracking-widest uppercase mb-3">
+              <h4 className="text-emerald-400 text-xs sm:text-base font-mono font-bold tracking-wider sm:tracking-widest uppercase mb-3">
                 AI Is Only One Part Of The Solution.
               </h4>
-              <p className="text-lg sm:text-2xl font-bold text-white leading-relaxed max-w-3xl">
+              <p className="text-sm sm:text-2xl font-bold text-white leading-relaxed max-w-3xl">
                 The goal is not to make your business “more AI-powered.”
                 <br className="hidden sm:inline" />
-                <span className="text-emerald-300  ">
+                <span className="text-emerald-300">
                   The goal is to make it less dependent on memory, manual
                   follow-ups, repeated coordination and you.
                 </span>
               </p>
-              <div className="mt-8">
+              <div className="mt-6 sm:mt-8 w-full sm:w-auto">
                 <a
                   href="#book-call"
-                  className="group/btn inline-flex items-center justify-center rounded-[2px] typo-blockquote cursor-pointer whitespace-nowrap transition-colors h-[48px] px-8 py-[12px] text-white bg-primary shadow-[0px_0px_0px_1px_#3a8363,0px_1px_2px_0px_rgba(0,0,0,0.64)] relative overflow-hidden font-bold tracking-wider uppercase text-sm"
+                  className="group/btn inline-flex items-center justify-center rounded-[2px] typo-blockquote cursor-pointer whitespace-nowrap transition-colors h-[48px] w-full sm:w-auto px-4 sm:px-8 py-[12px] text-white bg-primary shadow-[0px_0px_0px_1px_#3a8363,0px_1px_2px_0px_rgba(0,0,0,0.64)] relative overflow-hidden font-bold tracking-wider uppercase text-xs sm:text-sm"
                 >
                   <span className="relative z-10">BOOK YOUR 1:1 CALL NOW</span>
                   <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(74.61%_74.61%_at_50.39%_0%,rgba(255,255,255,0.32)_0%,rgba(191,191,191,0.24)_25%,rgba(128,128,128,0.16)_50%,rgba(0,0,0,0)_100%)] transition-opacity" />

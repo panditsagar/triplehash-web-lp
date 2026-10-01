@@ -158,7 +158,7 @@ export default function PainPoints() {
                       {item.title}
                     </h3>
 
-                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
+                    <p className="text-md sm:text-base text-slate-600   font-medium">
                       {item.description}
                     </p>
                   </div>

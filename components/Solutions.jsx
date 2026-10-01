@@ -8,7 +8,6 @@ import {
   Workflow,
   BarChart3,
   Brain,
-  Sparkles,
 } from "lucide-react";
 
 const solutionsData = [
@@ -52,25 +51,20 @@ const solutionsData = [
 
 export default function Solutions() {
   return (
-    <section className="relative w-full bg-white  text-slate-900 overflow-hidden border-t border-b border-slate-200">
+    <section className="relative w-full bg-white text-slate-900 overflow-hidden border-b border-slate-200">
       {/* Outer Framed Container: Left & Right Vertical Screen Borders Aligning with Hero, Logo Marquee & Pain Points */}
-      <div className="relative z-10 pt-10 pb-16 w-full max-w-6xl mx-auto border-l border-r border-slate-200 px-4 sm:px-8 flex flex-col items-center">
-        
+      <div className="relative z-10 pt-8 sm:pt-10 pb-10 sm:pb-16 w-[calc(100%-20px)] sm:w-full max-w-6xl mx-auto border-l border-r border-slate-200 px-3 sm:px-8 flex flex-col items-center">
         {/* Section Header */}
-        <div className="max-w-3xl text-center flex flex-col items-center mb-16">
-         
-
+        <div className="max-w-3xl text-center flex flex-col items-center mb-10 sm:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="headline text-3xl sm:text-4xl font-semibold  text-slate-900 leading-tight"
+            className="headline text-2xl sm:text-4xl font-semibold text-slate-900 leading-tight"
           >
             Where Is Your Business <br className="hidden sm:inline" />
-            <span className="text-[#0a6c42]">
-              Still Running Manually?
-            </span>
+            <span className="text-[#0a6c42]">Still Running Manually?</span>
           </motion.h2>
 
           <motion.p
@@ -78,14 +72,16 @@ export default function Solutions() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-5 text-base sm:text-lg text-[#70707b] font-medium max-w-2xl leading-tight"
+            className="mt-4 sm:mt-5 text-md sm:text-lg text-[#70707b] font-medium max-w-2xl leading-tight"
           >
-            We identify the parts of your business that depend on people remembering, following up, checking and updating then turn them into smarter systems.
+            We identify the parts of your business that depend on people
+            remembering, following up, checking and updating then turn them into
+            smarter systems.
           </motion.p>
         </div>
 
         {/* 6 Solution Cards Grid Wall */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 w-full mb-16 border-l border-t border-slate-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 w-full mb-10 sm:mb-16 border-l border-t border-slate-200">
           {solutionsData.map((item, idx) => {
             const IconComponent = item.icon;
             return (
@@ -95,18 +91,18 @@ export default function Solutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="relative p-6 sm:p-8 border-r border-b border-slate-200 flex items-start gap-4 sm:gap-5 transition-colors"
+                className="relative p-5 sm:p-8 border-r border-b border-slate-200 flex items-start gap-3 sm:gap-5 transition-colors"
               >
                 <div className="w-10 h-10 shrink-0 border border-dashed border-slate-300 flex items-center justify-center text-[#0a6c42] mt-1">
                   <IconComponent className="w-5 h-5" />
                 </div>
 
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2 sm:mb-3 leading-snug">
+                  <h3 className="text-lg sm:text-2xl font-bold text-slate-900 mb-2 sm:mb-3 leading-snug">
                     {item.title}
                   </h3>
 
-                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
+                  <p className="text-md sm:text-base text-slate-600  font-medium">
                     {item.description}
                   </p>
                 </div>
@@ -121,16 +117,20 @@ export default function Solutions() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="w-full max-w-4xl p-8 sm:p-10   border border-slate-200 text-center relative overflow-hidden  "
+          className="w-full max-w-4xl p-6 sm:p-10 border border-slate-200 text-center relative overflow-hidden"
         >
           <div className="relative z-10 flex flex-col items-center">
-            <p className="text-xl sm:text-2xl font-bold text-slate-900 leading-relaxed max-w-3xl">
-              If A Process Repeats, Depends On Follow-Up Or Keeps Coming Back To You <span className="text-[#0a6c42] underline underline-offset-4 decoration-[#0a6c42]/40">It Can Probably Be Systemised.</span>
+            <p className="text-lg sm:text-2xl font-bold text-slate-900   max-w-3xl">
+              If A Process Repeats, Depends On Follow-Up Or Keeps Coming Back To
+              You{" "}
+              <span className="text-[#0a6c42]  ">
+                It Can Probably Be Systemised.
+              </span>
             </p>
-            <div className="mt-8">
+            <div className="mt-6 sm:mt-8 w-full sm:w-auto">
               <a
                 href="#book-call"
-                className="group/btn inline-flex items-center justify-center rounded-[2px] typo-blockquote cursor-pointer whitespace-nowrap transition-colors h-[48px] px-8 py-[12px] text-white bg-primary shadow-[0px_0px_0px_1px_#3a8363,0px_1px_2px_0px_rgba(0,0,0,0.64)] relative overflow-hidden font-bold tracking-wider uppercase text-sm"
+                className="group/btn inline-flex items-center justify-center rounded-[2px] typo-blockquote cursor-pointer whitespace-nowrap transition-colors h-[48px] w-full sm:w-auto px-4 sm:px-8 py-[12px] text-white bg-primary shadow-[0px_0px_0px_1px_#3a8363,0px_1px_2px_0px_rgba(0,0,0,0.64)] relative overflow-hidden font-bold tracking-wider uppercase text-xs sm:text-sm"
               >
                 <span className="relative z-10">BOOK YOUR 1:1 CALL NOW</span>
                 <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(74.61%_74.61%_at_50.39%_0%,rgba(255,255,255,0.32)_0%,rgba(191,191,191,0.24)_25%,rgba(128,128,128,0.16)_50%,rgba(0,0,0,0)_100%)] transition-opacity" />
@@ -145,7 +145,6 @@ export default function Solutions() {
             </div>
           </div>
         </motion.div>
-
       </div>
     </section>
   );
