@@ -9,20 +9,17 @@ export default function Hero() {
 
   return (
     <section
-      className="relative min-h-screen w-full flex flex-col items-center overflow-hidden"
+      className="relative   w-full flex flex-col items-center overflow-hidden"
       style={{
         background:
           "radial-gradient(ellipse at center, #004421 0%, #042717 100%)",
       }}
     >
       {/* Top Left Tech Circuit SVG Decorative Element (Below Navbar) */}
-      <div
-        className="absolute w-[161px] h-[245px] pointer-events-none hidden lg:block z-20"
-        style={{ right: "calc(50% + 576px)", top: "64px" }}
-      >
+      <div className="absolute w-[100px] sm:w-[161px] h-[152px] sm:h-[245px] pointer-events-none block z-20 left-2 right-auto lg:left-auto lg:right-[calc(50%+576px)] top-0 sm:top-16 opacity-75 sm:opacity-100">
         <svg
-          width="161"
-          height="245"
+          width="100%"
+          height="100%"
           viewBox="0 0 161 245"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -325,17 +322,10 @@ export default function Hero() {
       </div>
 
       {/* Top Right Tech Circuit SVG Decorative Element (Below Navbar) */}
-      <div
-        className="absolute w-[161px] h-[245px] pointer-events-none hidden lg:block z-20"
-        style={{
-          left: "calc(50% + 576px)",
-          top: "64px",
-          transform: "scaleX(-1)",
-        }}
-      >
+      <div className="absolute w-[100px] sm:w-[161px] h-[152px] sm:h-[245px] pointer-events-none block z-20 right-2 left-auto lg:right-auto lg:left-[calc(50%+576px)] top-0 sm:top-16 opacity-75 sm:opacity-100 [transform:scaleX(-1)]">
         <svg
-          width="161"
-          height="245"
+          width="100%"
+          height="100%"
           viewBox="0 0 161 245"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -638,20 +628,20 @@ export default function Hero() {
       </div>
 
       {/* 100% Full Screen Width Top Navbar Horizontal Divider Border */}
-      <div className="w-full bg-[#042717] border-b border-white/10 h-16  ">
-        <div className="w-full max-w-6xl mx-auto border-l border-r border-white/10 h-full px-4 sm:px-8 flex items-center justify-center"></div>
+      <div className="w-full bg-[#042717] border-b border-white/10 h-12 sm:h-16">
+        <div className="w-[calc(100%-20px)] sm:w-full max-w-6xl mx-auto border-l border-r border-white/10 h-full px-4 sm:px-8 flex items-center justify-center"></div>
       </div>
 
       {/* Main Hero Content Box with Left & Right Vertical Screen Borders */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto border-l border-r border-white/10 flex-1 px-4 sm:px-8 pt-10 pb-14 flex flex-col items-center text-center">
+      <div className="relative z-10 w-[calc(100%-20px)] sm:w-full max-w-6xl mx-auto border-l border-r border-white/10 flex-1 px-3 sm:px-8 pt-6 sm:pt-10 pb-10 sm:pb-14 flex flex-col items-center text-center">
         {/* Targeted Audience Text in Navbar */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-2  text-3xl   font-bold tracking-wider uppercase">
-          <div>
+        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 sm:gap-2 mb-2 sm:mb-2 text-2xl sm:text-2xl md:text-3xl font-bold tracking-wider uppercase text-center">
+          <div className="whitespace-nowrap">
             <span className="text-[#26a36e]">₹1 CRORE+</span>{" "}
             <span className="text-white">REVENUE?</span>
           </div>
 
-          <div>
+          <div className="whitespace-nowrap">
             <span className="text-[#26a36e]">5+ PEOPLE</span>{" "}
             <span className="text-white">ON YOUR TEAM?</span>
           </div>
@@ -661,9 +651,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
-          className="headline text-4xl sm:text-[2.6rem]   font-medium text-white tracking-tight leading-[1.1] max-w-4xl"
+          className="headline text-3xl sm:text-[2.6rem] font-medium text-white tracking-tight leading-[1.2] sm:leading-[1.1] max-w-4xl"
         >
-          But Still Involved &nbsp;
+          But Still Involved<span className="hidden sm:inline">&nbsp;</span>
+          <span className="sm:hidden"> </span>
           <span className="bg-gradient-to-r from-emerald-200 via-emerald-400 to-teal-200 bg-clip-text text-transparent drop-shadow-sm">
             In Every Decision?
           </span>
@@ -674,7 +665,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-          className="mt-10 text-lg sm:text-xl md:text-2xl text-[#FFFFFF80] max-w-3xl font-medium "
+          className="mt-6 sm:mt-10 text-md sm:text-xl md:text-2xl text-[#FFFFFF80] max-w-3xl font-medium "
         >
           Build the systems that{" "}
           <strong className="text-white font-semibold">
@@ -692,11 +683,11 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-          className="mt-12 mb-14 flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-2xl"
+          className="mt-8 sm:mt-12 mb-10 sm:mb-14 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-2xl px-2 sm:px-0"
         >
           <a
             href="#book-call"
-            className="group/btn inline-flex items-center justify-center rounded-[2px] typo-blockquote cursor-pointer whitespace-nowrap transition-colors h-[48px] px-8 py-[12px] text-white bg-primary shadow-[0px_0px_0px_1px_#3a8363,0px_1px_2px_0px_rgba(0,0,0,0.64)] relative overflow-hidden font-bold tracking-wider uppercase text-sm"
+            className="group/btn inline-flex items-center justify-center rounded-[2px] typo-blockquote cursor-pointer whitespace-nowrap transition-colors h-[48px] w-full sm:w-auto px-4 sm:px-8 py-[12px] text-white bg-primary shadow-[0px_0px_0px_1px_#3a8363,0px_1px_2px_0px_rgba(0,0,0,0.64)] relative overflow-hidden font-bold tracking-wider uppercase text-xs sm:text-sm"
           >
             <span className="relative z-10">BOOK YOUR 1:1 CALL NOW</span>
             <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(74.61%_74.61%_at_50.39%_0%,rgba(255,255,255,0.32)_0%,rgba(191,191,191,0.24)_25%,rgba(128,128,128,0.16)_50%,rgba(0,0,0,0)_100%)] transition-opacity" />
@@ -710,30 +701,37 @@ export default function Hero() {
           </a>
 
           <button
-            onClick={() => setIsPlaying(true)}
-            className="group/btn inline-flex items-center justify-center gap-2 rounded-[2px] cursor-pointer whitespace-nowrap transition-all h-[48px] px-8 py-[12px] text-white border border-[#FFFFFFB3] hover:bg-[#FFFFFF0F] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.64)] relative overflow-hidden font-bold tracking-wider text-sm"
+            onClick={() => {
+              setIsPlaying(true);
+              const videoElem = document.getElementById("vsl-video");
+              if (videoElem) {
+                videoElem.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="group/btn inline-flex items-center justify-center gap-2 rounded-[2px] cursor-pointer whitespace-nowrap transition-all h-[48px] w-full sm:w-auto px-4 sm:px-8 py-[12px] text-white border border-[#FFFFFFB3] hover:bg-[#FFFFFF0F] shadow-[0px_1px_2px_0px_rgba(0,0,0,0.64)] relative overflow-hidden font-bold tracking-wider text-xs sm:text-sm"
           >
-            <Play className="w-4 h-4 text-white fill-white" />
+            <Play className="w-4 h-4 text-white fill-white shrink-0" />
             <span className="relative z-10">Watch 2 min vsl video</span>
           </button>
         </motion.div>
 
         {/* VSL Video Section (Below Button) */}
         <motion.div
+          id="vsl-video"
           initial={{ opacity: 0, scale: 0.96, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="w-full max-w-4xl group"
         >
-          <div className="relative p-3 bg-[#1E5D3F]">
+          <div className="relative p-2 sm:p-3 bg-[#1E5D3F]">
             {/* Top-Left Tech Corner Accent */}
-            <span className="absolute -top-[2px] -left-[2px] w-6 h-6 border-t-3 border-l-3 border-[#26a36e] pointer-events-none z-30  " />
+            <span className="absolute -top-[2px] -left-[2px] w-4 h-4 sm:w-6 sm:h-6 border-t-[3px] border-l-[3px] border-[#26a36e] pointer-events-none z-30" />
             {/* Top-Right Tech Corner Accent */}
-            <span className="absolute -top-[2px] -right-[2px] w-6 h-6 border-t-3 border-r-3 border-[#26a36e] pointer-events-none z-30  " />
+            <span className="absolute -top-[2px] -right-[2px] w-4 h-4 sm:w-6 sm:h-6 border-t-[3px] border-r-[3px] border-[#26a36e] pointer-events-none z-30" />
             {/* Bottom-Left Tech Corner Accent */}
-            <span className="absolute -bottom-[2px] -left-[2px] w-6 h-6 border-b-3 border-l-3 border-[#26a36e] pointer-events-none z-30  " />
+            <span className="absolute -bottom-[2px] -left-[2px] w-4 h-4 sm:w-6 sm:h-6 border-b-[3px] border-l-[3px] border-[#26a36e] pointer-events-none z-30" />
             {/* Bottom-Right Tech Corner Accent */}
-            <span className="absolute -bottom-[2px] -right-[2px] w-6 h-6 border-b-3 border-r-3 border-[#26a36e] pointer-events-none z-30  " />
+            <span className="absolute -bottom-[2px] -right-[2px] w-4 h-4 sm:w-6 sm:h-6 border-b-[3px] border-r-[3px] border-[#26a36e] pointer-events-none z-30" />
 
             <div className="relative aspect-video overflow-hidden flex flex-col items-center justify-center">
               <iframe
