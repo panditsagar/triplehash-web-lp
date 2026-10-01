@@ -36,7 +36,7 @@ const processSteps = [
 
 export default function ProcessSection() {
   return (
-    <section className="relative w-full bg-white text-slate-900 overflow-hidden border-t border-b border-slate-200">
+    <section className="relative w-full bg-white text-slate-900 overflow-hidden border-t   border-slate-200">
       {/* Outer Framed Container: Left & Right Vertical Screen Borders Aligning across all sections */}
       <div className="relative pt-8 sm:pt-12 pb-10 sm:pb-16 z-10 w-[calc(100%-20px)] sm:w-full max-w-6xl mx-auto border-l border-r border-slate-200 px-3 sm:px-8 flex flex-col items-center">
         {/* Section Header */}

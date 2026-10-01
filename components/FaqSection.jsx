@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Sparkles, Plus, Minus, ArrowRight } from "lucide-react";
+import { Plus, Minus, ArrowRight } from "lucide-react";
 
 const faqData = [
   {
@@ -40,17 +40,17 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="relative w-full bg-white  text-slate-900 overflow-hidden border-t border-b border-slate-200">
+    <section className="relative w-full bg-white text-slate-900 overflow-hidden border-b border-slate-200">
       {/* Outer Framed Container: Left & Right Vertical Screen Borders Aligning across all sections */}
-      <div className="relative z-10 pt-12 pb-20 w-full max-w-6xl mx-auto border-l border-r border-slate-200 px-4 sm:px-8 flex flex-col items-center">
+      <div className="relative z-10 pt-8 sm:pt-12 pb-12 sm:pb-20 w-[calc(100%-20px)] sm:w-full max-w-6xl mx-auto border-l border-r border-slate-200 px-3 sm:px-8 flex flex-col items-center">
         {/* Section Header */}
-        <div className="max-w-3xl text-center flex flex-col items-center mb-10">
+        <div className="max-w-3xl text-center flex flex-col items-center mb-8 sm:mb-10 px-2 sm:px-0">
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="headline text-3xl sm:text-4xl font-semibold text-slate-900 leading-tight"
+            className="headline text-2xl sm:text-4xl font-semibold text-slate-900 leading-tight"
           >
             Frequently Asked <span className="text-[#0a6c42]">Questions</span>
           </motion.h2>
@@ -60,14 +60,14 @@ export default function FaqSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-4 text-base sm:text-lg text-[#70707b] font-medium max-w-xl leading-tight"
+            className="mt-3 sm:mt-4 text-md sm:text-lg text-[#70707b] font-medium max-w-xl leading-tight"
           >
             Everything you need to know about how we partner with your business.
           </motion.p>
         </div>
 
         {/* FAQ Accordion List - Clean White Border Boxes matching reference image */}
-        <div className="w-full max-w-4xl flex flex-col gap-3.5 mb-14">
+        <div className="w-full max-w-4xl flex flex-col gap-3 sm:gap-3.5 mb-10 sm:mb-14">
           {faqData.map((item, idx) => {
             const isOpen = openIdx === idx;
             return (
@@ -81,12 +81,12 @@ export default function FaqSection() {
               >
                 <button
                   onClick={() => toggleFaq(idx)}
-                  className="w-full p-5 sm:p-6 flex items-center justify-between text-left gap-4  transition-colors"
+                  className="w-full p-4 sm:p-6 flex items-center justify-between text-left gap-3 sm:gap-4 transition-colors"
                 >
-                  <h3 className="text-base sm:text-lg font-medium text-slate-800 leading-snug">
+                  <h3 className="text-sm sm:text-lg font-medium text-slate-800 leading-snug">
                     {item.question}
                   </h3>
-                  <div className="text-slate-400   shrink-0 transition-transform duration-200 cursor-pointer">
+                  <div className="text-slate-400 shrink-0 transition-transform duration-200 cursor-pointer">
                     {isOpen ? (
                       <Minus className="w-5 h-5 text-slate-500" />
                     ) : (
@@ -104,7 +104,7 @@ export default function FaqSection() {
                       transition={{ duration: 0.25, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="px-5 pb-6 sm:px-6 sm:pb-6 text-sm sm:text-base text-slate-600 font-medium   ">
+                      <div className="px-4 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-base text-slate-600 font-medium">
                         {item.answer}
                       </div>
                     </motion.div>
@@ -121,15 +121,15 @@ export default function FaqSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex justify-center"
+          className="flex justify-center w-full sm:w-auto px-2 sm:px-0"
         >
           <a
             href="#book-call"
-            className="group/btn inline-flex items-center justify-center rounded-[2px] typo-blockquote cursor-pointer whitespace-nowrap transition-colors h-[48px] px-8 py-[12px] text-white bg-primary shadow-[0px_0px_0px_1px_#3a8363,0px_1px_2px_0px_rgba(0,0,0,0.64)] relative overflow-hidden font-bold tracking-wider uppercase text-sm"
+            className="group/btn inline-flex items-center justify-center rounded-[2px] typo-blockquote cursor-pointer whitespace-nowrap transition-colors h-[48px] w-full sm:w-auto px-4 sm:px-8 py-[12px] text-white bg-primary shadow-[0px_0px_0px_1px_#3a8363,0px_1px_2px_0px_rgba(0,0,0,0.64)] relative overflow-hidden font-bold tracking-wider uppercase text-xs sm:text-sm"
           >
             <span className="relative z-10 flex items-center gap-2">
               <span>BOOK YOUR 1:1 CALL NOW</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 shrink-0" />
             </span>
             <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(74.61%_74.61%_at_50.39%_0%,rgba(255,255,255,0.32)_0%,rgba(191,191,191,0.24)_25%,rgba(128,128,128,0.16)_50%,rgba(0,0,0,0)_100%)] transition-opacity" />
             <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(74.61%_74.61%_at_50.39%_0%,rgba(0,0,0,0)_0%,rgba(128,128,128,0.1)_50%,rgba(255,255,255,0.2)_100%)] opacity-0 group-active/btn:opacity-100 transition-opacity" />
