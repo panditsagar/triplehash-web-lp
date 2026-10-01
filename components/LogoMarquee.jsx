@@ -20,11 +20,11 @@ const row2Logos = [
 
 function LogoTile({ logo }) {
   return (
-    <div className="flex-shrink-0 w-48 sm:w-56 h-20 sm:h-24 bg-white text-slate-900 border-r border-b border-t border-slate-200 flex items-center justify-center p-4 hover:bg-slate-50 transition-colors">
+    <div className="flex-shrink-0 w-36 xs:w-44 sm:w-56 h-16 sm:h-24 bg-white text-slate-900 border-r border-b border-t border-slate-200 flex items-center justify-center p-3 sm:p-4 hover:bg-slate-50 transition-colors">
       <img
         src={logo.src}
         alt={logo.alt}
-        className="max-h-10 sm:max-h-22 w-auto max-w-[140px] sm:max-w-[140px] object-contain"
+        className="max-h-8 sm:max-h-22 w-auto max-w-[110px] sm:max-w-[140px] object-contain"
       />
     </div>
   );
@@ -34,14 +34,18 @@ export default function LogoMarquee() {
   return (
     <section className="relative w-full bg-white overflow-hidden border-t border-slate-200">
       {/* Container framing with left & right vertical borders */}
-      <div className="w-full max-w-6xl mx-auto border-l border-r border-slate-200 flex flex-col items-center py-14">
+      <div className="w-[calc(100%-20px)] sm:w-full max-w-6xl mx-auto border-l border-r border-slate-200 flex flex-col items-center py-8 sm:py-14">
         {/* Title */}
-        <p className="text-xs sm:text-sm font-mono tracking-[0.1em] text-neutral-500 mb-10 text-center font-semibold px-4">
+        <p className="text-xs sm:text-sm font-mono tracking-[0.1em] text-neutral-500 mb-6 sm:mb-10 text-center font-semibold px-4">
           Trusted by thousands of global businesses
         </p>
 
         {/* Marquee Rows Container - No Gap Grid */}
-        <div className="w-full flex flex-col gap-0 overflow-hidden">
+        <div className="relative w-full flex flex-col gap-0 overflow-hidden">
+          {/* Subtle Left & Right Edge Fades */}
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-6 sm:w-16 bg-gradient-to-r from-white to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-6 sm:w-16 bg-gradient-to-l from-white to-transparent z-10" />
+
           {/* Row 1 - Left Marquee */}
           <div className="flex w-full overflow-hidden">
             <div className="flex shrink-0 animate-[marquee-left_30s_linear_infinite] hover:[animation-play-state:paused]">
