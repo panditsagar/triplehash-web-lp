@@ -126,11 +126,11 @@ export default function BeforeAfter() {
             </motion.p>
           </div>
 
-          {/* 6 Paired Comparison Rows Wall */}
-          <div className="w-full max-w-6xl mb-10 sm:mb-16 border-l border-t border-neutral-300">
+          {/* Desktop View: 6 Paired Comparison Rows Wall */}
+          <div className="hidden md:block w-full max-w-6xl mb-16 border-l border-t border-neutral-300">
             {/* Table Header Row */}
-            <div className="grid grid-cols-2 gap-0 border-r border-b border-neutral-300 text-sm sm:text-lg font-bold tracking-wider text-slate-700">
-              <div className="p-3 sm:p-4 border-r border-neutral-300 flex items-center justify-center">
+            <div className="grid grid-cols-2 gap-0 border-r border-b border-neutral-300 text-lg font-bold tracking-wider text-slate-700">
+              <div className="p-4 border-r border-neutral-300 flex items-center justify-center">
                 <span>Before</span>
               </div>
               <div
@@ -138,7 +138,7 @@ export default function BeforeAfter() {
                   background:
                     "radial-gradient(ellipse at center, #004421 0%, #042717 100%)",
                 }}
-                className="p-3 sm:p-4 flex items-center justify-center text-[#ffffff]"
+                className="p-4 flex items-center justify-center text-[#ffffff]"
               >
                 <span>After</span>
               </div>
@@ -152,22 +152,62 @@ export default function BeforeAfter() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className="grid grid-cols-1 md:grid-cols-2 gap-0 border-r border-b border-neutral-300"
+                className="grid grid-cols-2 gap-0 border-r border-b border-neutral-300"
               >
                 {/* BEFORE CELL */}
-                <div className="p-3.5 sm:p-5 bg-[#f2f2ed] border-b md:border-b-0 border-r border-neutral-300 flex items-start gap-2.5 sm:gap-3.5">
-                  <XCircle className="w-4 h-4 sm:w-5 sm:h-5 text-red-500 shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium">
+                <div className="p-5 bg-[#f2f2ed] border-r border-neutral-300 flex items-start gap-3.5">
+                  <XCircle className="w-5 h-5 text-red-500 shrink-0 mt-0.5" />
+                  <span className="text-base text-slate-700 leading-relaxed font-medium">
                     {pair.before}
                   </span>
                 </div>
 
                 {/* AFTER CELL */}
-                <div className="p-3.5 sm:p-5 flex items-start gap-2.5 sm:gap-3.5">
-                  <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#0a6c42] shrink-0 mt-0.5" />
-                  <span className="text-sm sm:text-base text-slate-900 leading-relaxed font-semibold">
+                <div className="p-5 flex items-start gap-3.5">
+                  <CheckCircle2 className="w-5 h-5 text-[#0a6c42] shrink-0 mt-0.5" />
+                  <span className="text-base text-slate-900 leading-relaxed font-semibold">
                     {pair.after}
                   </span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Mobile View: Stacked Cards with Colored Badges */}
+          <div className="w-full flex flex-col gap-2 mb-10 md:hidden">
+            {comparisonPairs.map((pair, idx) => (
+              <motion.div
+                key={`mobile-${idx}`}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: idx * 0.08 }}
+                className="w-full bg-white border border-neutral-300 rounded-none overflow-hidden"
+              >
+                {/* BEFORE SECTION */}
+                <div className="p-4 bg-[#f4f3ec] border-b border-neutral-300 flex flex-col gap-2">
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-red-100/80 text-red-700 border border-red-200/80 text-[11px] font-extrabold uppercase tracking-wider">
+                      <XCircle className="w-3.5 h-3.5 text-red-600 shrink-0" />
+                      <span>BEFORE</span>
+                    </span>
+                  </div>
+                  <p className="text-sm text-slate-700 font-medium leading-relaxed">
+                    {pair.before}
+                  </p>
+                </div>
+
+                {/* AFTER SECTION */}
+                <div className="p-4 bg-white flex flex-col gap-2">
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-emerald-100/90 text-[#0a6c42] border border-emerald-300/80 text-[11px] font-extrabold uppercase tracking-wider">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#0a6c42] shrink-0" />
+                      <span>AFTER</span>
+                    </span>
+                  </div>
+                  <p className="text-sm text-slate-900 font-bold leading-relaxed">
+                    {pair.after}
+                  </p>
                 </div>
               </motion.div>
             ))}
