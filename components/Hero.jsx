@@ -719,11 +719,11 @@ export default function Hero() {
             {/* Top-Left Tech Corner Accent */}
             <span className="absolute -top-[2px] -left-[2px] w-4 h-4 sm:w-6 sm:h-6 border-t-[2px] border-l-[2px] sm:border-t-[3px] sm:border-l-[3px] border-[#26a36e] pointer-events-none z-30" />
             {/* Top-Right Tech Corner Accent */}
-            <span className="absolute -top-[2px] -right-[2px] w-4 h-4 sm:w-6 sm:h-6 border-t-[2px] border-r-[2px] sm:border-t-[3px] sm:border-l-[3px] border-[#26a36e] pointer-events-none z-30" />
+            <span className="absolute -top-[2px] -right-[2px] w-4 h-4 sm:w-6 sm:h-6 border-t-[2px] border-r-[2px] sm:border-t-[3px] sm:border-r-[3px] border-[#26a36e] pointer-events-none z-30" />
             {/* Bottom-Left Tech Corner Accent */}
-            <span className="absolute -bottom-[2px] -left-[2px] w-4 h-4 sm:w-6 sm:h-6 border-b-[2px] border-l-[2px] sm:border-t-[3px] sm:border-l-[3px] border-[#26a36e] pointer-events-none z-30" />
+            <span className="absolute -bottom-[2px] -left-[2px] w-4 h-4 sm:w-6 sm:h-6 border-b-[2px] border-l-[2px] sm:border-b-[3px] sm:border-l-[3px] border-[#26a36e] pointer-events-none z-30" />
             {/* Bottom-Right Tech Corner Accent */}
-            <span className="absolute -bottom-[2px] -right-[2px] w-4 h-4 sm:w-6 sm:h-6 border-b-[2px] border-r-[2px] sm:border-t-[3px] sm:border-l-[3px] border-[#26a36e] pointer-events-none z-30" />
+            <span className="absolute -bottom-[2px] -right-[2px] w-4 h-4 sm:w-6 sm:h-6 border-b-[2px] border-r-[2px] sm:border-b-[3px] sm:border-r-[3px] border-[#26a36e] pointer-events-none z-30" />
 
             <div className="relative aspect-video overflow-hidden flex flex-col items-center justify-center">
               <iframe
