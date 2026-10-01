@@ -42,10 +42,7 @@ export default function LogoMarquee() {
 
         {/* Marquee Rows Container - No Gap Grid */}
         <div className="relative w-full flex flex-col gap-0 overflow-hidden">
-          {/* Subtle Left & Right Edge Fades */}
-          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-6 sm:w-16 bg-gradient-to-r from-white to-transparent z-10" />
-          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-6 sm:w-16 bg-gradient-to-l from-white to-transparent z-10" />
-
+         
           {/* Row 1 - Left Marquee */}
           <div className="flex w-full overflow-hidden">
             <div className="flex shrink-0 animate-[marquee-left_30s_linear_infinite] hover:[animation-play-state:paused]">
