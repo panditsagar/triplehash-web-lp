@@ -85,7 +85,7 @@ export default function Solutions() {
         </div>
 
         {/* 6 Solution Cards Grid Wall */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 w-full mb-16 border-l border-t border-slate-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 w-full mb-16 border-l border-t border-slate-200">
           {solutionsData.map((item, idx) => {
             const IconComponent = item.icon;
             return (
@@ -95,14 +95,14 @@ export default function Solutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="relative p-6 sm:p-8   border-r border-b border-slate-200 flex flex-col justify-between   transition-colors"
+                className="relative p-6 sm:p-8 border-r border-b border-slate-200 flex items-start gap-4 sm:gap-5 transition-colors"
               >
-                <div>
-                  <div className="w-10 h-10     border  border-dashed border-slate-300 flex items-center justify-center mb-4 text-[#0a6c42]">
-                    <IconComponent className="w-5 h-5" />
-                  </div>
+                <div className="w-10 h-10 shrink-0 border border-dashed border-slate-300 flex items-center justify-center text-[#0a6c42] mt-1">
+                  <IconComponent className="w-5 h-5" />
+                </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3 leading-snug">
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2 sm:mb-3 leading-snug">
                     {item.title}
                   </h3>
 
