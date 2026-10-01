@@ -38,15 +38,15 @@ export default function ProcessSection() {
   return (
     <section className="relative w-full bg-white text-slate-900 overflow-hidden border-t border-b border-slate-200">
       {/* Outer Framed Container: Left & Right Vertical Screen Borders Aligning across all sections */}
-      <div className="relative pt-12 pb-16 z-10 w-full max-w-6xl mx-auto border-l border-r border-slate-200 flex flex-col items-center">
+      <div className="relative pt-8 sm:pt-12 pb-10 sm:pb-16 z-10 w-[calc(100%-20px)] sm:w-full max-w-6xl mx-auto border-l border-r border-slate-200 px-3 sm:px-8 flex flex-col items-center">
         {/* Section Header */}
-        <div className="max-w-3xl text-center flex flex-col items-center mb-10">
+        <div className="max-w-3xl text-center flex flex-col items-center mb-8 sm:mb-10 px-2 sm:px-0">
           <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="headline text-3xl sm:text-4xl font-semibold text-slate-900 leading-tight"
+            className="headline text-2xl sm:text-4xl font-semibold text-slate-900 leading-tight"
           >
             We Start With Your Business. <br className="hidden sm:inline" />
             <span className="text-[#0a6c42]">Then Build Around It.</span>
@@ -57,7 +57,7 @@ export default function ProcessSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-5 text-base sm:text-lg text-[#70707b] font-medium max-w-2xl leading-tight"
+            className="mt-4 sm:mt-5 text-md sm:text-lg text-[#70707b] font-medium max-w-2xl leading-tight"
           >
             Every business has different bottlenecks, workflows and levels of
             complexity. That’s why we don’t start with a fixed tool stack or a
@@ -71,15 +71,15 @@ export default function ProcessSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="w-full max-w-3xl text-center mb-10 flex flex-col items-center"
+          className="w-full max-w-3xl text-center mb-8 sm:mb-10 flex flex-col items-center  "
         >
-          <h3 className="text-2xl sm:text-3xl font-semibold text-slate-900 leading-tight">
+          <h3 className="text-xl sm:text-3xl font-semibold text-slate-900 leading-tight">
             Here’s How The 1-to-1 Process Works
           </h3>
         </motion.div>
 
         {/* 4 Cards Wall - All 4 Cards in One Row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 w-full mb-16 border-l border-t border-slate-200">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 w-full mb-10 sm:mb-16 border-l border-t border-slate-200">
           {processSteps.map((step, idx) => (
             <motion.div
               key={idx}
@@ -87,7 +87,7 @@ export default function ProcessSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="relative p-5 pb-0  border-r border-b border-slate-200 flex flex-col justify-between   transition-colors group"
+              className="relative p-5 pb-0 border-r border-b border-slate-200 flex flex-col justify-between transition-colors group"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
@@ -101,13 +101,13 @@ export default function ProcessSection() {
                   {step.title}
                 </h4>
 
-                <p className="text-sm text-slate-600 leading-relaxed font-medium ">
+                <p className="text-md sm:text-base text-slate-600   font-medium">
                   {step.description}
                 </p>
               </div>
 
               {/* Visual Card Image Box */}
-              <div className="w-full h-55   p-3 flex items-center justify-center relative overflow-hidden group rounded-none mt-auto">
+              <div className="w-full h-44 sm:h-55 p-3 flex items-center justify-center relative overflow-hidden group rounded-none mt-auto">
                 <img
                   src={step.image || "/process-audit.jpg"}
                   alt={step.title}
@@ -124,15 +124,15 @@ export default function ProcessSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="flex justify-center"
+          className="flex justify-center w-full sm:w-auto px-2 sm:px-0"
         >
           <a
             href="#book-call"
-            className="group/btn inline-flex items-center justify-center rounded-[2px] typo-blockquote cursor-pointer whitespace-nowrap transition-colors h-[48px] px-8 py-[12px] text-white bg-primary shadow-[0px_0px_0px_1px_#3a8363,0px_1px_2px_0px_rgba(0,0,0,0.64)] relative overflow-hidden font-bold tracking-wider uppercase text-sm"
+            className="group/btn inline-flex items-center justify-center rounded-[2px] typo-blockquote cursor-pointer whitespace-nowrap transition-colors h-[48px] w-full sm:w-auto px-4 sm:px-8 py-[12px] text-white bg-primary shadow-[0px_0px_0px_1px_#3a8363,0px_1px_2px_0px_rgba(0,0,0,0.64)] relative overflow-hidden font-bold tracking-wider uppercase text-xs sm:text-sm"
           >
             <span className="relative z-10 flex items-center gap-2">
               <span>BOOK YOUR 1:1 CALL NOW</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 shrink-0" />
             </span>
             <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(74.61%_74.61%_at_50.39%_0%,rgba(255,255,255,0.32)_0%,rgba(191,191,191,0.24)_25%,rgba(128,128,128,0.16)_50%,rgba(0,0,0,0)_100%)] transition-opacity" />
             <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(74.61%_74.61%_at_50.39%_0%,rgba(0,0,0,0)_0%,rgba(128,128,128,0.1)_50%,rgba(255,255,255,0.2)_100%)] opacity-0 group-active/btn:opacity-100 transition-opacity" />
